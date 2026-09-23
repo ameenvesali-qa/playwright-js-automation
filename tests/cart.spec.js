@@ -9,7 +9,9 @@ test('item added to cart', async ({ page }) => {
 
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
   await page.locator('[data-test="shopping-cart-link"]').click();
-  await expect(page).toHaveURL(/cart/);
+  await expect(
+  page.locator('[data-test="inventory-item-name"]').filter({ hasText: 'Sauce Labs Backpack' })
+).toHaveCount(1);
 
   await expect(page.locator('[data-test="inventory-item-name"]')).toHaveText('Sauce Labs Backpack');
 });
