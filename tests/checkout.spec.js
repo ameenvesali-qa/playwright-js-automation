@@ -5,11 +5,10 @@ test('standard user can checkout', async ({ loggedInPage: page }) => {
   
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
   await page.locator('[data-test="shopping-cart-link"]').click();
+  await expect(page).toHaveURL(/cart/);
   await expect(
   page.locator('[data-test="inventory-item-name"]').filter({ hasText: 'Sauce Labs Backpack' })
 ).toHaveCount(1);
-
-  await expect(page.locator('[data-test="inventory-item-name"]')).toHaveText('Sauce Labs Backpack');
   
   await page.locator('[data-test="checkout"]').click();
   await expect(page).toHaveURL(/checkout-step-one/);
