@@ -16,7 +16,7 @@
     "trace": "playwright show-trace",
     "codegen": "playwright codegen https://www.saucedemo.com",
     "test:chromium:list": "playwright test --project=chromium --reporter=list"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ameenvesali-qa/playwright-js-automation.git"
@@ -32,5 +32,8 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4"
   }
 }

@@ -1,12 +1,15 @@
+// test-data/users.js
+require('dotenv').config();
+
 module.exports = {
   users: {
     standard: {
-      username: 'standard_user',
-      password: 'secret_sauce',
+      username: process.env.SAUCE_USERNAME,
+      password: process.env.SAUCE_PASSWORD,
     },
     lockedOut: {
-      username: 'locked_out_user',
-      password: 'secret_sauce',
+      username: process.env.SAUCE_LOCKED_USERNAME || 'locked_out_user',
+      password: process.env.SAUCE_PASSWORD,
     },
   },
 };
