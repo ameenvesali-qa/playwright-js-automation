@@ -2,7 +2,7 @@ const { test, expect } = require('../fixtures');
 const { InventoryPage } = require('../pages/InventoryPage');
 const { CartPage } = require('../pages/CartPage');
 
-test('item added to cart', async ({ loggedInPage: page }) => {
+test('item added to cart', { tag: '@smoke' }, async ({ loggedInPage: page }) => {
   const inventoryPage = new InventoryPage(page);
   const cartPage = new CartPage(page);
 

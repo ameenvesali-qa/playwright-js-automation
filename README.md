@@ -61,6 +61,7 @@ npm run test:api             # API tests only
 npm run test:headed          # headed mode
 npm run test:ui              # Playwright UI Mode
 npm run report               # open HTML report
+npx playwright test --grep @smoke   # run only the critical smoke tests
 ```
 
 Other useful commands:

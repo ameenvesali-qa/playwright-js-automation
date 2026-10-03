@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/LoginPage');
 const { users } = require('../test-data/users');
 
-test('standard user can log in', async ({ page }) => {
+test('standard user can log in', { tag: '@smoke' }, async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   await loginPage.login(users.standard.username, users.standard.password);
