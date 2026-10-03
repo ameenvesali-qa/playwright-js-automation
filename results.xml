@@ -1,0 +1,132 @@
+<testsuites id="" name="" tests="11" failures="0" skipped="0" errors="2" time="31.218792">
+<testsuite name="api/booking.spec.js" timestamp="2026-10-03T11:39:24.815Z" hostname="chromium" tests="2" failures="0" skipped="0" time="60.08" errors="2">
+<testcase name="GET /booking returns a list of bookings" classname="api/booking.spec.js" time="30.038">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/api-booking-GET-booking-returns-a-list-of-bookings-chromium/error-context.md]]
+
+[[ATTACHMENT|test-results/api-booking-GET-booking-returns-a-list-of-bookings-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/booking.spec.js:3:1 › GET /booking returns a list of bookings ───────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: apiRequestContext.get: Request context disposed.
+    Call log:
+      - → GET https://restful-booker.herokuapp.com/booking
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      2 |
+      3 | test('GET /booking returns a list of bookings', async ({ request }) => {
+    > 4 |   const response = await request.get('https://restful-booker.herokuapp.com/booking');
+        |                                  ^
+      5 |   expect(response.status()).toBe(200);
+      6 |   const body = await response.json();
+      7 |   expect(Array.isArray(body)).toBe(true);
+        at /home/ameen/Desktop/playwright-js-automation/tests/api/booking.spec.js:4:34
+
+    Error Context: ../test-results/api-booking-GET-booking-returns-a-list-of-bookings-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/api-booking-GET-booking-returns-a-list-of-bookings-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/api-booking-GET-booking-returns-a-list-of-bookings-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="POST /booking creates a booking" classname="api/booking.spec.js" time="30.042">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/api-booking-POST-booking-creates-a-booking-chromium/error-context.md]]
+
+[[ATTACHMENT|test-results/api-booking-POST-booking-creates-a-booking-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/booking.spec.js:11:1 › POST /booking creates a booking ──────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: apiRequestContext.post: Request context disposed.
+    Call log:
+      - → POST https://restful-booker.herokuapp.com/booking
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36
+        - accept: application/json
+        - accept-encoding: gzip,deflate,br
+        - Content-Type: application/json
+        - content-length: 169
+
+
+      10 |
+      11 | test('POST /booking creates a booking', async ({ request }) => {
+    > 12 |   const response = await request.post('https://restful-booker.herokuapp.com/booking', {
+         |                                  ^
+      13 |     headers: {
+      14 |       'Content-Type': 'application/json',
+      15 |       'Accept': 'application/json',
+        at /home/ameen/Desktop/playwright-js-automation/tests/api/booking.spec.js:12:34
+
+    Error Context: ../test-results/api-booking-POST-booking-creates-a-booking-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/api-booking-POST-booking-creates-a-booking-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/api-booking-POST-booking-creates-a-booking-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="cart.spec.js" timestamp="2026-10-03T11:39:24.815Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.852" errors="0">
+<testcase name="item added to cart" classname="cart.spec.js" time="1.852">
+<system-err>
+<![CDATA[Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="checkout.spec.js" timestamp="2026-10-03T11:39:24.815Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.333" errors="0">
+<testcase name="standard user can checkout" classname="checkout.spec.js" time="2.333">
+<system-err>
+<![CDATA[Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.js" timestamp="2026-10-03T11:39:24.815Z" hostname="chromium" tests="3" failures="0" skipped="0" time="5.513" errors="0">
+<testcase name="standard user can log in" classname="login.spec.js" time="1.973">
+<system-err>
+<![CDATA[Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+]]>
+</system-err>
+</testcase>
+<testcase name="wrong password shows an error" classname="login.spec.js" time="1.716">
+<system-err>
+<![CDATA[Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+]]>
+</system-err>
+</testcase>
+<testcase name="locked out user cannot log in" classname="login.spec.js" time="1.824">
+</testcase>
+</testsuite>
+<testsuite name="negativeLogin.spec.js" timestamp="2026-10-03T11:39:24.815Z" hostname="chromium" tests="4" failures="0" skipped="0" time="6.663" errors="0">
+<testcase name="login fails: wrong password" classname="negativeLogin.spec.js" time="1.64">
+</testcase>
+<testcase name="login fails: locked out user" classname="negativeLogin.spec.js" time="1.796">
+</testcase>
+<testcase name="login fails: empty username" classname="negativeLogin.spec.js" time="1.588">
+</testcase>
+<testcase name="login fails: empty password" classname="negativeLogin.spec.js" time="1.639">
+</testcase>
+</testsuite>
+</testsuites>

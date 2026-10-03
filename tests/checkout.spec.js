@@ -3,7 +3,7 @@ const { InventoryPage } = require('../pages/InventoryPage');
 const { CartPage } = require('../pages/CartPage');
 const { CheckoutPage } = require('../pages/CheckoutPage');
 
-test('standard user can checkout', async ({ loggedInPage: page }) => {
+test('standard user can checkout', { tag: '@smoke' }, async ({ loggedInPage: page }) => {
   const inventoryPage = new InventoryPage(page);
   const cartPage = new CartPage(page);
   const checkoutPage = new CheckoutPage(page);
